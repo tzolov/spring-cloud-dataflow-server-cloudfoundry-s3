@@ -24,11 +24,16 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <spring-cloud-dataflow.version>1.0.0.RELEASE</spring-cloud-dataflow.version>
-        <spring-cloud-deployer-cloudfoundry.version>1.0.0.BUILD-SNAPSHOT</spring-cloud-deployer-cloudfoundry.version>
+        <spring-cloud-deployer-cloudfoundry.version>1.0.0.M4</spring-cloud-deployer-cloudfoundry.version>
         <reactor.version>2.5.0.M3</reactor.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>${reactor.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-aws-core</artifactId>
@@ -39,11 +44,11 @@
             <artifactId>spring-cloud-starter-dataflow-server-cloudfoundry</artifactId>
             <version>${spring-cloud-deployer-cloudfoundry.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-deployer-cloudfoundry</artifactId>
-            <version>${spring-cloud-deployer-cloudfoundry.version}</version>
-        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-deployer-cloudfoundry</artifactId>-->
+        <!--<version>${spring-cloud-deployer-cloudfoundry.version}</version>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>
